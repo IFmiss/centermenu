@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>centerMenu的测试</title>
+	<link rel="shortcut icon" href="http://www.daiwei.org/index/images/logo/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="http://www.daiwei.org/global/css/global.css">
+<!-- 	<link rel="stylesheet" href="css/animate.css"> -->
+	<link rel="stylesheet" href="http://www.daiwei.org/components/toast/css/toast.css">	
+	<link rel="stylesheet" href="css/centermenu.css">
+</head>
+
+<style>
+	body,html{
+		height: 100%;
+		/*display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;*/
+	}
+
+	.ul-centermenu{
+		width: 200px;
+		margin: 0 auto;
+	}
+
+	.ul-centermenu li{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+</style>
+
+<body>
+	<p style="width: 300px;margin: 50px auto;background: #222;color: #fff;margin-bottom: 40px;border-radius: 6px;padding: 10px;font-size: 14px;line-height: normal;">'-hastrans'是我在animate.css的基础上加的,目的是当元素为绝对定位又想用translate居中时候,修改translate的值无效,故做了一些修改,之前的class也可以正常使用</p>
+	<ul class="ul-centermenu">
+		<li class="dw-btn btn-success has-hover centermenu" onclick="centermenu1()">默认效果</li>
+		<li class="dw-btn btn-primary has-hover centermenu" onclick="centermenu2()">无分割线效果</li>
+		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu3()">进入效果flipInX-hastrans,flipOutX-hastrans</li>
+		<li class="dw-btn btn-warning has-hover centermenu" onclick="centermenu4()">进入效果bounceIn-hastrans,bounceOut-hastrans</li>
+		<li class="dw-btn btn-success has-hover centermenu" onclick="centermenu5()">调整动画时间800ms</li>
+		<li class="dw-btn btn-primary has-hover centermenu" onclick="centermenu6()">自定义内容和宽高</li>
+		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu7()">点击之后的回调</li>
+	</ul>
+</body>
+
+<script src="http://www.daiwei.org/global/js/jquery.js"></script>
+<script src="http://www.daiwei.org/components/toast/js/toast.js"></script>
+<script src="js/centermenu.js"></script>
+<script>
+	function centermenu1(){
+		$('body').centermenu();
+	}
+
+	function centermenu2(){
+		$('body').centermenu({
+			hasLineBorder:false,
+		});
+	}
+
+	function centermenu3(){
+		$('body').centermenu({
+			animateIn:'bounceIn-hastrans',
+			animateOut:'fadeOut-hastrans',
+			hasLineBorder:false,
+			duration:800,
+		});
+	}
+
+	function centermenu4(){
+		$('body').centermenu({
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
+			hasLineBorder:false,
+		});
+	}
+
+	function centermenu5(){
+		$('body').centermenu({
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
+			hasLineBorder:false,
+			duration:800,
+		});
+	}
+
+	function centermenu6(){
+		$('body').centermenu({
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
+			hasLineBorder:false,
+			duration:300,
+			source:['复制','分享','搜索'],
+			liWidth:300,
+			liHeight:50,
+		});
+	}
+
+	function centermenu7(){
+		$('body').centermenu({
+			animateIn:'bounceIn-hastrans',
+			animateOut:'bounceOut-hastrans',
+			hasLineBorder:false,
+			duration:300,
+			source:['复制','分享','搜索'],
+			liWidth:300,
+			liHeight:50,
+			click:function(ret){
+				//这里的showMessage是调用的另一个插件  toast
+				showMessage(JSON.stringify(ret));
+			}
+		});
+	}
+</script>
+</html>
