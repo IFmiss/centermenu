@@ -24,6 +24,8 @@
 }
 
 .cpt-selectCenterMenu{
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
 	position:fixed;
 	width: 320px;
     height: auto;

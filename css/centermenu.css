@@ -119,6 +119,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 26, ../sass/centermenu.scss */
 .cpt-selectCenterMenu {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
   position: fixed;
   width: 320px;
   height: auto;
@@ -134,7 +136,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-user-select: none;
   user-select: none;
 }
-/* line 37, ../sass/centermenu.scss */
+/* line 39, ../sass/centermenu.scss */
 .cpt-selectCenterMenu .li-selectCenterMenu {
   cursor: pointer;
   width: 100%;
@@ -146,11 +148,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* line 44, ../sass/centermenu.scss */
+/* line 46, ../sass/centermenu.scss */
 .cpt-selectCenterMenu .li-selectCenterMenu:active {
   background: #eee;
 }
-/* line 48, ../sass/centermenu.scss */
+/* line 50, ../sass/centermenu.scss */
 .cpt-selectCenterMenu .li-selectCenterMenu.border-1px {
   position: relative;
 }
