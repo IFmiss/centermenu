@@ -36,6 +36,7 @@
 <body>
 	<p style="width: 300px;margin: 50px auto;background: #222;color: #fff;margin-bottom: 40px;border-radius: 6px;padding: 10px;font-size: 14px;line-height: normal;">'-hastrans'是我在animate.css的基础上加的,目的是当元素为绝对定位又想用translate居中时候,修改translate的值无效,故做了一些修改,之前的class也可以正常使用</p>
 	<ul class="ul-centermenu">
+		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu0()">无动画效果</li>
 		<li class="dw-btn btn-success has-hover centermenu" onclick="centermenu1()">默认效果</li>
 		<li class="dw-btn btn-primary has-hover centermenu" onclick="centermenu2()">无分割线效果</li>
 		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu3()">进入效果flipInX-hastrans,flipOutX-hastrans</li>
@@ -50,6 +51,12 @@
 <script src="http://www.daiwei.org/components/toast/js/toast.js"></script>
 <script src="js/centermenu.js"></script>
 <script>
+	function centermenu0(){
+		$('body').centermenu({
+			duration:0,
+		});
+	}
+
 	function centermenu1(){
 		$('body').centermenu();
 	}
