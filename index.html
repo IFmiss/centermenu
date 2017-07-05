@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" href="http://www.daiwei.org/index/images/logo/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<link rel="stylesheet" href="http://www.daiwei.org/global/css/global.css">
-<!-- 	<link rel="stylesheet" href="css/animate.css"> -->
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="http://www.daiwei.org/components/toast/css/toast.css">	
 	<link rel="stylesheet" href="css/centermenu.css">
 </head>
@@ -39,7 +39,7 @@
 		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu0()">无动画效果</li>
 		<li class="dw-btn btn-success has-hover centermenu" onclick="centermenu1()">默认效果</li>
 		<li class="dw-btn btn-primary has-hover centermenu" onclick="centermenu2()">无分割线效果</li>
-		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu3()">进入效果flipInX-hastrans,flipOutX-hastrans</li>
+		<li class="dw-btn btn-danger has-hover centermenu" onclick="centermenu3()">进入效果fadeInRight-hastrans,fadeOutRight-hastrans</li>
 		<li class="dw-btn btn-warning has-hover centermenu" onclick="centermenu4()">进入效果bounceIn-hastrans,bounceOut-hastrans</li>
 		<li class="dw-btn btn-success has-hover centermenu" onclick="centermenu5()">调整动画时间800ms</li>
 		<li class="dw-btn btn-primary has-hover centermenu" onclick="centermenu6()">自定义内容和宽高</li>
@@ -69,8 +69,8 @@
 
 	function centermenu3(){
 		$('body').centermenu({
-			animateIn:'bounceIn-hastrans',
-			animateOut:'fadeOut-hastrans',
+			animateIn:'fadeInRight-hastrans',
+			animateOut:'fadeOutRight-hastrans',
 			hasLineBorder:false,
 			duration:800,
 		});
@@ -107,10 +107,10 @@
 
 	function centermenu7(){
 		$('body').centermenu({
-			animateIn:'bounceIn-hastrans',
-			animateOut:'bounceOut-hastrans',
+			animateIn:'fadeInDownBig-hastrans',
+			animateOut:'fadeOutDownBig-hastrans',
 			hasLineBorder:false,
-			duration:300,
+			duration:600,
 			source:['复制','分享','搜索'],
 			liWidth:300,
 			liHeight:50,

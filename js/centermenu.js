@@ -19,7 +19,7 @@
 		}
     }
 
-    loadStyles('http://www.daiwei.org/global/css/animate.css');
+    // loadStyles('http://www.daiwei.org/global/css/animate.css');
 
 	var showMask = function(options) {
     	var _this = this;
@@ -56,19 +56,25 @@
     	};
 
     	defaultvalue._showScroll = function(isShow){
-    		var isshow = isshow || 'false';
-    		if(isShow){
-    			$('body,html').css({height:'auto',overflow:'auto'});
+    		var eleHeight = window.screen.availHeight ;			//浏览器可以工作的区域高度
+    		var bodyHeight = document.body.clientHeight || document.documentElement.clientHeight;		//网页的实际高度
+    		if(bodyHeight > eleHeight) {
+    			var isshow = isshow || 'false';
+	    		if(isShow){
+	    			$('body,html').css({height:'auto',overflow:'auto'});
 
-    			$(document.body).css({
-    				'border-right':'none',
-    			})
-    		}else{
-    			var scrollWidth = defaultvalue._getScrollWidth();
-    			$('body,html').css({height:'100%',overflow:'hidden'});
-    			$('body').css({
-    				'border-right':scrollWidth+'px solid transparent',
-    			})
+	    			$(document.body).css({
+	    				'border-right':'none',
+	    			})
+	    		}else{
+	    			var scrollWidth = defaultvalue._getScrollWidth();
+	    			$('body,html').css({height:'100%',overflow:'hidden'});
+	    			$('body').css({
+	    				'border-right':scrollWidth+'px solid transparent',
+	    			})
+	    		}
+    		} else {
+    			return
     		}
     	};
 
