@@ -1,8 +1,6 @@
 # centermenu
 弹出层，选择菜单在中间的样式插件
 
-在线预览地址: http://www.daiwei.org/components/centermenu/
-
 * ## 参数
 
 * ### liWidth 
